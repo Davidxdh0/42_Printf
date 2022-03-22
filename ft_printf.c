@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/16 15:14:22 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/03/17 18:34:57 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/03/22 18:08:16 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	ft_parse(va_list ap, const char str)
 	// 	printf("komt in void * pointer to hexdec en ");
 	// }
 	if (str == 'x')
-		counter_printed += ft_putnbrbase(va_arg(ap, int),16, 1);
+		ft_putnbr_base(va_arg(ap, int), "123456789abcdef", 'x');
 	if (str == 'X')
-		counter_printed += ft_putnbrbase(va_arg(ap, int),16, 0);
+		ft_putnbr_base(va_arg(ap, int),"123456789ABCDEF", 'X');
 	va_end(ap);
 	return (counter_printed);
 }

@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/17 15:19:22 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/03/17 18:33:41 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/03/22 17:59:21 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,52 +54,24 @@ int main()
   	// int *ptr = &x;
 	// printf("The address is: %p, the value is %d\n", ptr, *ptr);
 	// ft_printf("The address is: %p, the value is %d\n", ptr, *ptr);
+	printf("printf\n");
 	printf(" %x ", 0);
 	printf(" %x ", -1);
-	printf(" %x ", 1);
-	printf(" %x ", 9);
-	printf(" %x ", 10);
-	printf(" %x ", 11);
-	printf(" %x ", 15);
-	printf(" %x ", 16);
-	printf(" %x ", 17);
-	printf(" %x ", 99);
 	printf(" %x ", 100);
-	printf(" %x ", 101);
 	printf(" %x ", -9);
-	printf(" %x ", -10);
-	printf(" %x ", -11);
-	printf(" %x ", -14);
-	printf(" %x ", -15);
-	printf(" %x ", -16);
-	printf(" %x ", -99);
-	printf(" %x ", -100);
-	printf(" %x \nprintf\n", -101);
-
+	printf(" %x ", -101);
+	
+	printf("\nmijn printf\n");
 	ft_printf(" %x ", 0);
 	ft_printf(" %x ", -1);
-	ft_printf(" %x ", 1);
-	ft_printf(" %x ", 9);
-	ft_printf(" %x ", 10);
-	ft_printf(" %x ", 11);
-	ft_printf(" %x ", 15);
-	ft_printf(" %x ", 16);
-	ft_printf(" %x ", 17);
-	ft_printf(" %x ", 99);
 	ft_printf(" %x ", 100);
-	ft_printf(" %x ", 101);
 	ft_printf(" %x ", -9);
-	ft_printf(" %x ", -10);
-	ft_printf(" %x ", -11);
-	ft_printf(" %x ", -14);
-	ft_printf(" %x ", -15);
-	ft_printf(" %x ", -16);
-	ft_printf(" %x ", -99);
-	ft_printf(" %x ", -100);
-	ft_printf(" %x ", -101);
+	ft_printf(" %x \n", -101);
 	// printf("number to lowercase hex: %x\n", 47);
 	// ft_printf("number to lowercase hex: %x\n", 47);
 
 	// printf("number to lowercase hex: %X\n", 47);
 	// ft_printf("number to lowercase hex: %X\n", 47);
 }
+
+

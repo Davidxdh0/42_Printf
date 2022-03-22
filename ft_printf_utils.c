@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/16 15:16:26 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/03/17 18:33:55 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/03/22 18:11:19 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@ int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
+}
+
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s && s[i])
+		i++;
+	return (i);
 }
 
 int	ft_putnbr(long n)
@@ -69,47 +81,19 @@ int	ft_putstr(char *s)
 // 		ft_putchar(k[i++]);
 // }
 
-size_t	ft_hexlen(int n)
+int	ft_putnbr_base(unsigned int n, char *base, int flag)
 {
-	int	len;
-
-	len = 0;
-	while (n && len++ < 0)
-		n /= 16;
-	return (len);
-}
-
-int	ft_putnbrbase(int n, int base, int l)
-{
-	int i;
-	int quotient;
-	int temp;
-	char *hexstr;
-	int counter;
+	int	counter;
 
 	counter = 0;
-	hexstr = calloc(sizeof(char), (ft_hexlen(n) + 1));
-	quotient = n;
-	i = 0;
-	if (n == 0)
-		counter += ft_putnbr(0);
-	while (quotient != 0)
-	{
-		temp = quotient % base;
-		if (temp < 10)
-			temp = temp + 48;
-		else if (l == 1)
-			temp = temp + 87;
-		else if (l == 0)
-			temp = temp + 55;
-		hexstr[i]= temp;
-		i++;
-		quotient /= base;
-	}
-	quotient = i;
-	while (i >= 0)
-		ft_putchar(hexstr[i--]);
-	return (quotient);
+	if (n >= 16)
+		ft_putnbr_base(n / 16, base, flag);
+	if (flag == 'X')
+		ft_putchar("0123456789ABCDEF"[n % 16]);
+	else if (flag == 'x')
+		ft_putchar("0123456789abcdef"[n % 16]);
+	else
+		return (0);
+	counter++;
+	return (counter);
 }
-
-
