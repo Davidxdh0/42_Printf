@@ -6,7 +6,7 @@
 #    By: dyeboa <dyeboa@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/10/26 14:06:32 by dyeboa        #+#    #+#                  #
-#    Updated: 2022/03/22 17:32:59 by dyeboa        ########   odam.nl          #
+#    Updated: 2022/03/28 11:01:37 by dyeboa        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,19 +19,20 @@ FLAGS	= -Wall -Wextra -Werror
 .c.o :
 	${CC} -c ${FLAGS} -o $@ $<
 
+$(NAME): ${OBJS}
+	ar -rcs $(NAME) $(OBJS)
+
 run:
 	rm -f run
 	${CC} ${FLAGS} $(SRCS) main.c -o run
 	./run
-
-$(NAME): ${OBJS}
-	ar -rcs $(NAME) $(OBJS)
 
 all: $(NAME)
 
 clean:
 	rm -f $(OBJS)
 	rm -f $(NAME)
+	rm -f run
 
 fclean: clean
 	rm -f $(NAME)

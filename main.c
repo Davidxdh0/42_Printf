@@ -6,11 +6,12 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/17 15:19:22 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/03/22 17:59:21 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/03/28 16:48:08 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
 
 int main()
 {
@@ -50,28 +51,52 @@ int main()
 	// printf("percentage: %%\n");
 	// ft_printf("percentage: %%\n");
 	
-	// int x = 50;
-  	// int *ptr = &x;
-	// printf("The address is: %p, the value is %d\n", ptr, *ptr);
-	// ft_printf("The address is: %p, the value is %d\n", ptr, *ptr);
-	printf("printf\n");
-	printf(" %x ", 0);
-	printf(" %x ", -1);
-	printf(" %x ", 100);
-	printf(" %x ", -9);
-	printf(" %x ", -101);
+
+	// printf("printf\n");
+	// printf(" %x ", 0);
+	// printf(" %x ", -1);
+	// printf(" %x ", 100);
+	// printf(" %x ", -9);
+	// printf(" %x ", -101);
 	
-	printf("\nmijn printf\n");
-	ft_printf(" %x ", 0);
-	ft_printf(" %x ", -1);
-	ft_printf(" %x ", 100);
-	ft_printf(" %x ", -9);
-	ft_printf(" %x \n", -101);
+	// printf("\nmijn printf\n");
+	// ft_printf(" %x ", 0);
+	// ft_printf(" %x ", -1);
+	// ft_printf(" %x ", 100);
+	// ft_printf(" %x ", -9);
+	// ft_printf(" %x \n", -101);
 	// printf("number to lowercase hex: %x\n", 47);
 	// ft_printf("number to lowercase hex: %x\n", 47);
 
 	// printf("number to lowercase hex: %X\n", 47);
 	// ft_printf("number to lowercase hex: %X\n", 47);
+
+    // int i=85;
+
+    // printf("%p %Fp",i,i);
+	int x = 50;
+  	int *ptr = &x;
+	printf("The address is: %p, the value is %d\n", ptr, *ptr);
+	ft_printf("The address is: %p, the value is %d\n", ptr, *ptr);
+	// printf(" %p ", -1);
+	// printf(" %p ", 1);
+	// printf(" %p ", 15);
+	// printf(" %p ", 16);
+	// printf(" %p ", 17);
+	// printf(" %p %p ", LONG_MIN, LONG_MAX);
+	// printf(" %p %p ", INT_MIN, INT_MAX);
+	// printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
+	// printf(" %p %p ", 0, 0);
+
+	// ft_printf(" %p ", -1);
+	// ft_printf(" %p ", 1);
+	// ft_printf(" %p ", 15);
+	// ft_printf(" %p ", 16);
+	// ft_printf(" %p ", 17);
+	// ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
+	// ft_printf(" %p %p ", INT_MIN, INT_MAX);
+	// ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
+	// ft_printf(" %p %p ", 0, 0);
 }
 
 
